@@ -41,18 +41,30 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            z-index: 1;
         }
 
         .hand {
-            width: 45%;
             height: 3px;
             background-color: azure;
             position: absolute;
             top: 50%;
-            left: 5%;
             transform: translate(0, -50%);
             transform-origin: 100%;
             border-radius: 15px 0 0 15px;
+        }
+        .hour {
+            width: 35%;
+            left: 15%;
+        }
+        .minute {
+            width: 42.5%;
+            left: 7.5%;
+        }
+        .second {
+            width: 45%;
+            left: 5%;
+            /* background-color: darkred; */
         }
     </style>
 </head>
