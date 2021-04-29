@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS and CSS Clock</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            height: 100vh;
+            width: 100vw;
+            background: #108dc7;
+            background: -webkit-linear-gradient(to bottom, #ef8e38, #108dc7);
+            background: linear-gradient(to bottom, #ef8e38, #108dc7);
+        }
+
+        .clock {
+            border: 10px solid azure;
+            border-radius: 50%;
+            width: 20rem;
+            height: 20rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .punkt {
+            width: 0.9rem;
+            height: 0.9rem;
+            background-color: azure;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .hand {
+            width: 45%;
+            height: 3px;
+            background-color: azure;
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: translate(0, -50%);
+            transform-origin: 100%;
+            border-radius: 15px 0 0 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="clock">
+            <div class="punkt"></div>
+            <div class="hand hour"></div>
+            <div class="hand minute"></div>
+            <div class="hand second"></div>
+        </div>
+    </section>
+    <script>
+        const hour = document.querySelector(".hour");
+        const minute = document.querySelector(".minute");
+        const second = document.querySelector(".second");
+
+        setInterval(getDate, 1000);
+
+        function getDate() {
+            const date = new Date();
+            // console.log(date.getSeconds())
+            const hoursAngle = date.getHours();
+            const minutesAngle = date.getMinutes();
+            const secondsAngle = date.getSeconds();
+            hour.style.transform = `rotate(${90 + ((360/12)*hoursAngle)}deg)`;
+            minute.style.transform = `rotate(${90 + ((360/60)*minutesAngle)}deg)`;
+            second.style.transform = `rotate(${90 + ((360/60)*secondsAngle)}deg)`;
+        }
+
+        // hour.innerText = date.getHours;
+        // minute.innerText = date.getMinutes;
+        // second.innerText = date.getSeconds;
+    </script>
+</body>
+
+</html>
