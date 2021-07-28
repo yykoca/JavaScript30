@@ -18,6 +18,21 @@ body,html {
   justify-content: center;
 }
 
+.buttons {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%,-10px);
+
+}
+.key a {
+  display: block;
+  font-size: 2.75rem;
+  text-decoration: none;
+  color: white;
+}
+
 .key {
   border: .4rem solid black;
   border-radius: .5rem;
