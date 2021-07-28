@@ -21,6 +21,9 @@ header {
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
+    border-bottom: 1px solid rgb(70, 0, 15);
+    box-shadow: 1px 1px 3px rgb(130, 35, 0);
+    background: linear-gradient(to bottom, #d3d3d3, #fff8df);
 }
 
 span {
@@ -32,26 +35,36 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    height: 75vh;
-    width: 800px;
-    margin: 0 auto;
+    min-height: 75vh;
+    max-width: 900px;
+    margin: 0px auto;
 }
 
 section div {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 200px;
     /* border: solid 2px; */
     /* margin: 5px; */
     box-shadow: 3px 3px 4px rgb(60, 15, 0);
     /* border-radius: 12%; */
-    line-height: 150px;
+    /* line-height: 150px; */
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin: 5px;
+}
+
+section div:hover {
+    background-color: rgb(130, 35, 0);
+}
+section div:hover a {
+    color: #FFFFFF;
 }
 
 section div a {
     text-decoration: none;
     color: black;
-    font-size: 2rem;
-    padding: 50px;
+    /* font-size: 2rem; */
+    /* padding: 50px; */
 }
